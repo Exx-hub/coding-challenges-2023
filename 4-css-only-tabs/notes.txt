@@ -1,0 +1,4 @@
+-add target psuedo class in css to target element with id same as in url fragment
+-initially panels are displayed none, then when target is active, display block.
+
+-also add active psuedo class to button, to change bg color when clicked

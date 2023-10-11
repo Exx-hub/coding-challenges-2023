@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=VT323&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=VT323&display=swap");
 
 :root {
   --primary: #00b29d;
@@ -15,5 +15,38 @@ body {
 
 /* buttons */
 
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  border: 1px solid lightgray;
+  border-bottom: none;
+  width: 100%;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  opacity: 0.5;
+  font-weight: bold;
+}
+
+.button:active {
+  background-color: coral;
+}
 
 /* panels */
+
+.panels {
+  border: 1px solid lightgray;
+}
+
+.panel {
+  padding: 10px 15px;
+  margin-bottom: 25px;
+  display: none;
+}
+
+.panel:target {
+  display: block;
+}
