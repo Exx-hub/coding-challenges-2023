@@ -1,0 +1,25 @@
+burger menu
+
+-create a div, add classname of menu-button
+
+-inside div create three divs or spans
+-these will be your three bars for the burger menu
+
+-can use checkbox and state if using react to get checked property or not.
+-in this case i used no checkbox, just adding classname active when clicked. (using javascript)
+-this will cause the bars to change behavior
+
+-when active or checked,
+
+1st bar will rotate and move down a bit
+3rd bar will rotate and move up a bit
+2nd bar will be hidden
+
+
+forms and "X" if you will
+
+
+-now when active, a sidebar will be shown by making opacity to 1 and transform translate x
+
+-when burger is cliced also add "show" classname to the slide-menu
+-when show is added, opacity will become 1 and slidemenu will slide from the left offscreen

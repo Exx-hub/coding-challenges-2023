@@ -1,0 +1,10 @@
+CHECKBOX HIDDEN, BUT CLICKING IS WORKING VIA THE SWITCH
+-hide the input checkbox
+-need to wrap the toggleswitch in a label and add the htmlFor attribute, and id same id to the input
+-this will associate the switch to the checkbox, activating the checkbox even if it is hidden, and the switch is the one being clicked
+
+
+-style the label as a container
+-create a div or p as the button
+-check if checkbox is checked thru css, add css to translate the button left to right with transition
+

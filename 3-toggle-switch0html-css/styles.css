@@ -1,0 +1,50 @@
+:root {
+  --on: #6948ed;
+  --off: #555;
+  --toggle-width: 80px;
+  --toggle-height: 30px;
+}
+body {
+  background: lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* solution styles */
+
+input {
+  display: none;
+}
+
+.switch {
+  border: 1px solid black;
+  border-radius: 23px;
+  width: 70px;
+  padding: 8px;
+  position: relative;
+
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+}
+
+.toggleBtn {
+  position: absolute;
+  top: 5px;
+  left: 9px;
+  border-radius: 100px;
+  background-color: gray;
+  transform: translateX(0px);
+  width: 25px;
+  height: 25px;
+  transition: transform 200ms ease-in-out;
+}
+
+input:checked + .switch .toggleBtn {
+  transform: translateX(40px);
+}
+
+input:checked + .switch {
+  background-color: #333;
+}

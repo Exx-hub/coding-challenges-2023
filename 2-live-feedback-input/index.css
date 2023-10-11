@@ -1,0 +1,44 @@
+/* base styles */
+
+body {
+  background: gray;
+  text-align: center;
+  font-size: 1.4em;
+  font-family: Verdana;
+}
+form {
+  background: white;
+  margin: 200px auto;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+form .field {
+  display: flex;
+  align-items: center;
+}
+form input {
+  margin: 0 16px;
+  font-size: 0.8em;
+  border: 2px solid #777;
+  border-radius: 4px;
+  padding: 4px;
+  outline: none;
+}
+
+/* solution styles */
+span {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 200ms ease-out;
+}
+
+span.show {
+  opacity: 1;
+  color: #07cc81;
+  transform: translateY(0);
+}
+
+form input.valid {
+  border: 2px solid #07cc81;
+}

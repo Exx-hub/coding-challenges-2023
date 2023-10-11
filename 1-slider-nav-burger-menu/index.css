@@ -1,0 +1,107 @@
+/* start styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=VT323&display=swap");
+
+body {
+  margin: 0;
+  background: #444;
+  font-family: "Poppins";
+}
+li,
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+main {
+  padding: 140px 40px 40px;
+  color: #bbb;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+}
+
+.nav {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 99;
+  transition: transform 0.3s ease; /* Added animation */
+}
+
+span {
+  width: 35px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Rotate the burger icon */
+/* .burger.active { 
+transform: rotate(90deg); 
+ } */
+
+.burger.active span:nth-child(1) {
+  transform: translateY(11px) rotate(-45deg); /* Animate the first bar */
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0; /* Hide the second bar */
+}
+
+.burger.active span:nth-child(3) {
+  transform: translateY(-11px) rotate(45deg); /* Animate the third bar */
+}
+
+/* Style for the navigation menu */
+.slide-menu {
+  /* display: none; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  padding-top: 114.8125px;
+  background-color: black;
+  z-index: 2;
+  opacity: 0; /* Initially hidden */
+  transform: translateX(-100%);
+  transition: all 0.4s ease-in-out; /* Added animation */
+}
+
+.slide-menu ul {
+  list-style-type: none;
+}
+
+.slide-menu ul li {
+  margin: 15px;
+}
+
+.slide-menu ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+
+/* 
+.burger.active + .slide-menu {
+  opacity: 1;
+  transform: translateX(0);
+} */
+
+.slide-menu.show {
+  /* display: block; */
+  opacity: 1; /* Show the navigation menu with fade-in effect */
+  transform: translateX(0);
+}
