@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=VT323&display=swap");
+
+* {
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #222;
+  text-align: center;
+  color: #fff;
+}
+h1 {
+  margin: 20px 0;
+}
+section > div {
+  display: inline-block;
+  text-align: left;
+  height: 30px;
+  line-height: 30px;
+}
+
+.word-list {
+  display: flex;
+  flex-direction: column;
+  height: 30px;
+  overflow: hidden;
+}
+
+.word-list span {
+  animation: wordScroll ease-in-out 3300ms infinite;
+}
+
+.word-list span:nth-child(1) {
+  color: #ff4258;
+}
+.word-list span:nth-child(2) {
+  color: #72ff7a;
+}
+.word-list span:nth-child(3) {
+  color: #f7f76f;
+}
+.word-list span:nth-child(4) {
+  color: #9759fa;
+}
+.word-list span:nth-child(5) {
+  color: #03c7fd;
+}
+
+@keyframes wordScroll {
+  0% {
+    transform: translateY(0);
+  }
+
+  15% {
+    transform: translateY(-30px);
+  }
+
+  30% {
+    transform: translateY(-60px);
+  }
+
+  45% {
+    transform: translateY(-90px);
+  }
+
+  60% {
+    transform: translateY(-120px);
+  }
+
+  /* 70% {
+    transform: translateY(-120px);
+  } */
+
+  80% {
+    transform: translateY(-0);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

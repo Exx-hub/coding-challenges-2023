@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=VT323&display=swap");
+
+* {
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #333;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+}
+.card {
+  position: relative;
+  width: 420px;
+  height: 420px;
+  margin: 30px auto;
+  text-align: center;
+
+  border: 1px solid white;
+  background-color: black;
+  border-radius: 10px;
+
+  transform: rotateY(0deg);
+  transition: transform 700ms ease;
+}
+
+/* solution */
+
+section {
+  perspective: 900px;
+  /* makes it look 3D  */
+}
+
+.front {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+
+.back {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(180deg);
+  opacity: 0;
+  transition: opacity 0.7s;
+  /* backface-visibility: hidden; */
+}
+.flipped {
+  transform: rotateY(180deg);
+}
+
+.showing {
+  opacity: 1;
+}

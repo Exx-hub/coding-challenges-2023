@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=VT323&display=swap");
+
+* {
+  font-family: "Poppins";
+}
+body {
+  background: #222;
+  text-align: center;
+}
+form {
+  width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+input {
+  padding: 5px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 50px;
+  font-size: 1.4em;
+  margin: 10px auto;
+}
+form img {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.open {
+  display: block;
+}
+
+.closed {
+  display: none;
+}
+
+input[type="password"] {
+  order: 1;
+}
+
+input[type="password"]:not(:placeholder-shown) ~ .open {
+  display: none;
+}
+
+input[type="password"]:not(:placeholder-shown) ~ .closed {
+  display: block;
+}
+
+input[type="password"]:not(:focus) ~ .open {
+  display: block;
+}
+
+input[type="password"]:not(:focus) ~ .closed {
+  display: none;
+}
+
+/* can also add "required" attribute to the input, and use "valid" pseudo selector --- ex. input:valid  */
+
+/* also can also use form:has() to target the form and no need for reordering elements and using order  */
