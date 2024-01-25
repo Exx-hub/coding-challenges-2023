@@ -1,0 +1,20 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+
+  border: 1px solid coral;
+  padding: 10px;
+}
+
+.tile {
+  width: 50px;
+  height: 50px;
+  border: 1px solid lightgray;
+  cursor: pointer;
+}
+
+.active {
+  background-color: coral;
+  pointer-events: none;
+}

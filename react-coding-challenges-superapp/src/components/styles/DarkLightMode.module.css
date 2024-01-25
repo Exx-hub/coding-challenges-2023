@@ -1,0 +1,136 @@
+[data-theme="light"] {
+  background-color: white;
+  color: #333;
+}
+
+[data-theme="dark"] {
+  background-color: #333;
+  color: white;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggleButton {
+  --toggle-width: 50px;
+  --toggle-height: 28px;
+  --toggle-padding: 4px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.5rem;
+  line-height: 1;
+  width: var(--toggle-width);
+  height: var(--toggle-height);
+  padding: var(--toggle-padding);
+  border: 0;
+  border-radius: calc(var(--toggle-width) / 2);
+  cursor: pointer;
+  background: var(--color-bg-toggle);
+  transition: background 0.25s ease-in-out;
+
+  outline: none !important;
+
+  box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.034), -2px -2px 5px white, inset 2px 2px 3px gray,
+    inset -3px -5px 5px white;
+}
+
+[data-theme="dark"] .toggleButton {
+  box-shadow: 1px 1px 0px gray;
+}
+
+.toggleThumb {
+  --toggle-width: 60px;
+  --toggle-height: 28px;
+  --toggle-padding: 4px;
+  position: absolute;
+  /* top: var(--toggle-padding); */
+  top: -20px;
+  left: var(--toggle-padding);
+  width: calc(var(--toggle-height) - (var(--toggle-padding) * 2));
+  height: calc(var(--toggle-height) - (var(--toggle-padding) * 2));
+  border-radius: 50%;
+  background: rgb(179, 179, 179);
+  transition: transform 0.25s ease-in-out;
+
+  /* translate: 3d (calc(var(--toggle-width) - var(--toggle-height)), 0, 0); */
+}
+
+[data-theme="dark"] .toggleThumb {
+  transform: translateX(21px);
+}
+
+.toggleButton span {
+  font-size: 0.8rem;
+}
+
+/* html 
+
+<div>
+			<button onClick={handleTheme} className={styles.toggleButton}>
+				<p className={styles.toggleThumb}></p>
+				<span>🌙</span>
+				<span>☀️</span>
+			</button>
+		</div> */
+
+/* css from csp3 client for toggle theme styles
+
+
+.toggleButton {
+	--toggle-width: 50px;
+	--toggle-height: 28px;
+	--toggle-padding: 4px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	font-size: 1.5rem;
+	line-height: 1;
+	width: var(--toggle-width);
+	height: var(--toggle-height);
+	padding: var(--toggle-padding);
+	border: 0;
+	border-radius: calc(var(--toggle-width) / 2);
+	cursor: pointer;
+	background: var(--color-bg-toggle);
+	transition: background 0.25s ease-in-out;
+
+	box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.034), -2px -2px 5px white,
+		inset 2px 2px 3px gray, inset -3px -5px 5px white;
+}
+
+[data-theme="dark"] .toggleButton {
+	box-shadow: 1px 1px 0px gray;
+}
+
+.toggleThumb {
+	--toggle-width: 60px;
+	--toggle-height: 28px;
+	--toggle-padding: 4px;
+	position: absolute;
+	top: var(--toggle-padding);
+	left: var(--toggle-padding);
+	width: calc(var(--toggle-height) - (var(--toggle-padding) * 2));
+	height: calc(var(--toggle-height) - (var(--toggle-padding) * 2));
+	border-radius: 50%;
+	background: rgb(179, 179, 179);
+	transition: transform 0.25s ease-in-out;
+
+	translate: 3d(calc(var(--toggle-width) - var(--toggle-height)), 0, 0);
+}
+
+[data-theme="dark"] .toggleThumb {
+	transform: translateX(23px);
+}
+
+.toggleButton span {
+	font-size: 0.8rem;
+} */
