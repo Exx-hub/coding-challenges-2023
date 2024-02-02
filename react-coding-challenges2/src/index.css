@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-[#1f1e1e] text-gray-400;
+}
+
+/* so that text cannot be selected or highlighted */
+/* useful for buttons and text that are clickable, to disable annoying highlighting */
+div {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
