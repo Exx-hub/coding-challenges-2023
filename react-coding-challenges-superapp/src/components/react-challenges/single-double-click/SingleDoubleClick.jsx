@@ -15,6 +15,7 @@ function SingleDoubleClick() {
 
   const handleClick = (e) => {
     console.log(e.detail); // can watch for click count too
+    // setClickCount(e.detail);
     setClickCount((prev) => prev + 1);
   };
 

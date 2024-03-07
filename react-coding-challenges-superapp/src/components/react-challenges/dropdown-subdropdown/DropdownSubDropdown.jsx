@@ -13,10 +13,11 @@ const countries = [
 
 function DropdownSubDropdown() {
   const [selectedCountryValue, setSelectedCountryValue] = useState("");
+  const [selectedCity, setSelectedCity] = useState("");
 
   // derived state
   const country = countries.filter((e) => e.value === selectedCountryValue)[0];
-
+  console.log(country);
   return (
     <div className="container">
       <div>
@@ -37,12 +38,18 @@ function DropdownSubDropdown() {
             ))}
           </select>
 
-          <select className={styles.dropdown}>
+          <select
+            className={styles.dropdown}
+            value={selectedCity}
+            onChange={(e) => setSelectedCity(e.target.value)}
+          >
             <option value="" disabled>
               {selectedCountryValue ? "--Please choose a city--" : "--"}
             </option>
             {country?.cities?.map((e) => (
-              <option key={e}>{e}</option>
+              <option key={e} value={e}>
+                {e}
+              </option>
             ))}
           </select>
         </div>

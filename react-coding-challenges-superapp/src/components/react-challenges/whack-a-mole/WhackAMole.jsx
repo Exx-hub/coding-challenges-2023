@@ -49,9 +49,11 @@ function WhackAMole() {
       setMoles(molesCopy);
 
       // reset grid to make it seem like mole hides again
-      setTimeout(() => {
+      const timeout = setTimeout(() => {
         setMoles(new Array(9).fill(false));
       }, 1000);
+
+      return () => clearTimeout(timeout);
     }, 1500);
 
     return () => clearInterval(id);

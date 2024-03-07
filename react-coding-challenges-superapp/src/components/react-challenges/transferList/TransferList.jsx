@@ -15,9 +15,11 @@ function TransferList() {
 
   // add or remove item from the markedItems list 1
   const addOrRemoveMarkedItemsA = (item) => {
+    // remove
     if (markedItemsA.includes(item)) {
       setMarkedItemsA(markedItemsA.filter((i) => i !== item));
     } else {
+      // add
       setMarkedItemsA([...markedItemsA, item]);
     }
   };
